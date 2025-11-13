@@ -121,13 +121,13 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://xela_models/mesh/ft_f.stl"/>
+          <mesh filename="file://$(find xela_models)/mesh/ft_f.stl"/>
         </geometry>
       </collision>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://xela_models/mesh/ft_f.stl"/>
+          <mesh filename="file://$(find xela_models)/mesh/ft_f.stl"/>
         </geometry>
         <material name="${col}"/>
       </visual>
@@ -198,13 +198,13 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://xela_models/mesh/ft_c.stl"/>
+          <mesh filename="file://$(find xela_models)/mesh/ft_c.stl"/>
         </geometry>
       </collision>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://xela_models/mesh/ft_c.stl"/>
+          <mesh filename="file://$(find xela_models)/mesh/ft_c.stl"/>
         </geometry>
         <material name="${col}"/>
       </visual>
@@ -259,13 +259,13 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://xela_models/mesh/allegro/ahft_default.STL"/>
+          <mesh filename="file://$(find xela_models)/mesh/allegro/ahft_default.STL"/>
         </geometry>
       </collision>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://xela_models/mesh/allegro/ahft_default.STL"/>
+          <mesh filename="file://$(find xela_models)/mesh/allegro/ahft_default.STL"/>
         </geometry>
         <material name="${col}"/>
       </visual>
@@ -288,14 +288,14 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://xela_models/mesh/4x4.stl"/>
+          <mesh filename="file://$(find xela_models)/mesh/4x4.stl"/>
         </geometry>
       </collision>
       <xacro:if value="${body == 1}">
         <visual>
           <origin xyz="0 0 0" rpy="0 0 0" />
           <geometry>
-            <mesh filename="package://xela_models/mesh/4x4.stl"/>
+            <mesh filename="file://$(find xela_models)/mesh/4x4.stl"/>
           </geometry>
           <material name="${col}"/>
         </visual>
@@ -337,14 +337,14 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://xela_models/mesh/1x6.stl"/>
+          <mesh filename="file://$(find xela_models)/mesh/1x6.stl"/>
         </geometry>
       </collision>
       <xacro:if value="${body == 1}">
         <visual>
           <origin xyz="0 0 0" rpy="0 0 0" />
           <geometry>
-            <mesh filename="package://xela_models/mesh/1x6.stl"/>
+            <mesh filename="file://$(find xela_models)/mesh/1x6.stl"/>
           </geometry>
           <material name="${col}"/>
         </visual>
@@ -376,14 +376,14 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://xela_models/mesh/4x6.stl"/>
+          <mesh filename="file://$(find xela_models)/mesh/4x6.stl"/>
         </geometry>
       </collision>
       <xacro:if value="${body == 1}">
         <visual>
           <origin xyz="0 0 0" rpy="0 0 0" />
           <geometry>
-            <mesh filename="package://xela_models/mesh/4x6.stl"/>
+            <mesh filename="file://$(find xela_models)/mesh/4x6.stl"/>
           </geometry>
           <material name="${col}"/>
         </visual>
@@ -436,10 +436,10 @@
       <visual>
         <geometry>
           <xacro:if value="${palm == 1}">
-            <mesh filename="package://xela_models/mesh/allegro/base.stl" />
+            <mesh filename="file://$(find xela_models)/mesh/allegro/base.stl" />
           </xacro:if>
           <xacro:if value="${palm != 1}">
-            <mesh filename="package://xela_models/mesh/allegro/base_ns.stl"/>   
+            <mesh filename="file://$(find xela_models)/mesh/allegro/base_ns.stl"/>   
           </xacro:if>
         </geometry>
         <origin rpy="0 0 0" xyz="0 0 0 "/>
@@ -596,7 +596,7 @@
       <link name="${sequence}finger_link_${finger_num*4+0}">	
         <visual>
           <geometry>
-            <mesh filename="package://xela_models/mesh/allegro/link_0.0_ext.STL" />
+            <mesh filename="file://$(find xela_models)/mesh/allegro/link_0.0_ext.STL" />
           </geometry>
           <material name="grey"/>
         </visual>
@@ -623,10 +623,10 @@
         <visual>
           <geometry>
             <xacro:if value="${phalanges == 1}">
-              <mesh filename="package://xela_models/mesh/allegro/link_1.1.stl" />
+              <mesh filename="file://$(find xela_models)/mesh/allegro/link_1.1.stl" />
             </xacro:if>
             <xacro:if value="${phalanges != 1}">
-              <mesh filename="package://xela_models/mesh/allegro/link_1_ns.stl"/>   
+              <mesh filename="file://$(find xela_models)/mesh/allegro/link_1_ns.stl"/>   
             </xacro:if>
           </geometry>
           <material name="black" />
@@ -665,13 +665,13 @@
         <link name="${sequence}finger_link_${finger_num*4+1}_cover">	
           <visual>
             <geometry>
-              <mesh filename="package://xela_models/mesh/allegro/link_1_cover.stl" />
+              <mesh filename="file://$(find xela_models)/mesh/allegro/link_1_cover.stl" />
             </geometry>
             <material name="red"/>
           </visual>
           <collision>
             <geometry>
-              <mesh filename="package://xela_models/mesh/allegro/link_1_cover.stl" />
+              <mesh filename="file://$(find xela_models)/mesh/allegro/link_1_cover.stl" />
             </geometry>
             <origin rpy="0 0 0" xyz="0 0 ${0.0177/2}"/>
           </collision>
@@ -698,10 +698,10 @@
         <visual>
           <geometry>
             <xacro:if value="${phalanges == 1}">
-              <mesh filename="package://xela_models/mesh/allegro/link_2.1.stl" />
+              <mesh filename="file://$(find xela_models)/mesh/allegro/link_2.1.stl" />
             </xacro:if>
             <xacro:if value="${phalanges != 1}">
-              <mesh filename="package://xela_models/mesh/allegro/link_2_ns.stl"/>   
+              <mesh filename="file://$(find xela_models)/mesh/allegro/link_2_ns.stl"/>   
             </xacro:if>
           </geometry>
           <material name="black" />
@@ -740,13 +740,13 @@
         <link name="${sequence}finger_link_${finger_num*4+2}_cover">	
           <visual>
             <geometry>
-              <mesh filename="package://xela_models/mesh/allegro/link_2_cover.stl" />
+              <mesh filename="file://$(find xela_models)/mesh/allegro/link_2_cover.stl" />
             </geometry>
             <material name="red"/>
           </visual>
           <collision>
             <geometry>
-              <mesh filename="package://xela_models/mesh/allegro/link_2_cover.stl" />
+              <mesh filename="file://$(find xela_models)/mesh/allegro/link_2_cover.stl" />
             </geometry>
             <origin rpy="0 0 0" xyz="0 0 ${0.0514/2}"/>
           </collision>
@@ -770,7 +770,7 @@
       <link name="${sequence}finger_link_${finger_num*4+3}">	
         <visual>
           <geometry>
-            <mesh filename="package://xela_models/mesh/allegro/link_3.0.STL" />
+            <mesh filename="file://$(find xela_models)/mesh/allegro/link_3.0.STL" />
           </geometry>
           <material name="black" />
         </visual>
@@ -825,7 +825,7 @@
       <link name="${sequence}_link_${finger_num*4+0}">
         <visual>
           <geometry>
-            <mesh filename="package://xela_models/mesh/allegro/link_12.0_right.STL" />
+            <mesh filename="file://$(find xela_models)/mesh/allegro/link_12.0_right.STL" />
           </geometry>
           <material name="grey" />
         </visual>
@@ -851,7 +851,7 @@
       <link name="${sequence}_link_${finger_num*4+1}">	
         <visual>
           <geometry>
-            <mesh filename="package://xela_models/mesh/allegro/link_13.0.STL" />
+            <mesh filename="file://$(find xela_models)/mesh/allegro/link_13.0.STL" />
           </geometry>
           <material name="grey" />
         </visual>
@@ -871,13 +871,13 @@
         <link name="${sequence}_link_${finger_num*4+2}_cover">	
           <visual>
             <geometry>
-              <mesh filename="package://xela_models/mesh/allegro/thumb_1_cover.stl" />
+              <mesh filename="file://$(find xela_models)/mesh/allegro/thumb_1_cover.stl" />
             </geometry>
             <material name="red"/>
           </visual>
           <collision>
             <geometry>
-              <mesh filename="package://xela_models/mesh/allegro/thumb_1_cover.stl" />
+              <mesh filename="file://$(find xela_models)/mesh/allegro/thumb_1_cover.stl" />
             </geometry>
             <origin rpy="0 0 0" xyz="0 0 0"/>
           </collision>
@@ -899,10 +899,10 @@
         <visual>
           <geometry>
             <xacro:if value="${phalanges == 1}">
-              <mesh filename="package://xela_models/mesh/allegro/thumb_1.1.stl"/>   
+              <mesh filename="file://$(find xela_models)/mesh/allegro/thumb_1.1.stl"/>   
             </xacro:if>
             <xacro:if value="${phalanges != 1}">
-              <mesh filename="package://xela_models/mesh/allegro/thumb_1.1_ns.stl"/>   
+              <mesh filename="file://$(find xela_models)/mesh/allegro/thumb_1.1_ns.stl"/>   
             </xacro:if>
           </geometry>
           <material name="black" />
@@ -941,13 +941,13 @@
         <link name="${sequence}_link_${finger_num*4+3}_cover">	
           <visual>
             <geometry>
-              <mesh filename="package://xela_models/mesh/allegro/thumb_2_cover.stl" />
+              <mesh filename="file://$(find xela_models)/mesh/allegro/thumb_2_cover.stl" />
             </geometry>
             <material name="red"/>
           </visual>
           <collision>
             <geometry>
-              <mesh filename="package://xela_models/mesh/allegro/thumb_2_cover.stl" />
+              <mesh filename="file://$(find xela_models)/mesh/allegro/thumb_2_cover.stl" />
             </geometry>
             <origin rpy="0 0 0" xyz="0 0 0"/>
           </collision>
@@ -972,10 +972,10 @@
         <visual>
           <geometry>
             <xacro:if value="${phalanges == 1}">
-              <mesh filename="package://xela_models/mesh/allegro/thumb_2.1.stl"/>  
+              <mesh filename="file://$(find xela_models)/mesh/allegro/thumb_2.1.stl"/>  
             </xacro:if>
             <xacro:if value="${phalanges != 1}">
-              <mesh filename="package://xela_models/mesh/allegro/thumb_1.2_ns.stl"/>   
+              <mesh filename="file://$(find xela_models)/mesh/allegro/thumb_1.2_ns.stl"/>   
             </xacro:if> 
           </geometry>
         <material name="black" />

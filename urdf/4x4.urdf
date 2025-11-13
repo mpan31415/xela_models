@@ -58,13 +58,13 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://xela_models/mesh/4x4.stl" scale="1 1 1"/>
+        <mesh filename="file://$(find xela_models)/mesh/4x4.stl" scale="1 1 1"/>
       </geometry>
     </collision>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://xela_models/mesh/4x4.stl" scale="1 1 1"/>
+        <mesh filename="file://$(find xela_models)/mesh/4x4.stl" scale="1 1 1"/>
       </geometry>
       <material name="red"/>
     </visual>

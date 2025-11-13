@@ -19,7 +19,7 @@ def generate_launch_description():
         default_value=PathJoinSubstitution([
             FindPackageShare('xela_models'),
             'rviz',
-            'urdf.rviz'
+            'my_urdf.rviz'
         ]),
         description='RViz configuration file'
     )
@@ -68,9 +68,9 @@ def generate_launch_description():
     return LaunchDescription([
         model_arg,
         gui_arg,
-        # rvizconfig_arg,
+        rvizconfig_arg,
         joint_state_publisher_gui,
         joint_state_publisher,
         robot_state_publisher_node,
-        # rviz_node
+        rviz_node
     ])
