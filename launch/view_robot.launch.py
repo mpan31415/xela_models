@@ -9,7 +9,9 @@ from launch_ros.substitutions import FindPackageShare
 def generate_launch_description():
     # Launch arguments
     model_arg = DeclareLaunchArgument(
-        'model', default_value='4x4', description='Xela model type (e.g. 4x4)'
+        # 'model', default_value='4x4', description='Xela model type (e.g. 4x4)'
+        # 'model', default_value='ahrcpcpn', description='Xela model type (e.g. 4x4)'
+        'model', default_value='my_xela_allegro', description='Xela model type (e.g. 4x4)'
     )
     gui_arg = DeclareLaunchArgument(
         'gui', default_value='true', description='Use joint_state_publisher_gui if true'
@@ -36,7 +38,8 @@ def generate_launch_description():
         'xacro',
         ' ',
         xacro_file,
-        TextSubstitution(text='.xacro')
+        # TextSubstitution(text='.xacro')    # visualization using xacro
+        TextSubstitution(text='.urdf')      # visualization using urdf
     ])
 
     # Nodes
