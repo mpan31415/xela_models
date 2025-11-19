@@ -11,7 +11,8 @@ def generate_launch_description():
     model_arg = DeclareLaunchArgument(
         # 'model', default_value='4x4', description='Xela model type (e.g. 4x4)'
         # 'model', default_value='ahrcpcpn', description='Xela model type (e.g. 4x4)'
-        'model', default_value='my_xela_allegro', description='Xela model type (e.g. 4x4)'
+        # 'model', default_value='my_xela_allegro', description='Xela model type (e.g. 4x4)'
+        'model', default_value='xela_allegro', description='Xela model type (e.g. 4x4)'
     )
     gui_arg = DeclareLaunchArgument(
         'gui', default_value='true', description='Use joint_state_publisher_gui if true'
@@ -21,7 +22,8 @@ def generate_launch_description():
         default_value=PathJoinSubstitution([
             FindPackageShare('xela_models'),
             'rviz',
-            'my_urdf.rviz'
+            # 'my_urdf.rviz'
+            'xela_allegro.rviz'
         ]),
         description='RViz configuration file'
     )
