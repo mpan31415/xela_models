@@ -20,6 +20,8 @@
     <color rgba="0.8 0 0 1.0"/>
   </material>
 
+  <!--PALM-->
+
   <link name="allegro_base_link" >
     <visual>
      <origin rpy="0 3.14159265359 1.57079632679 " xyz="-0.0265 0 -0.0964"/>
@@ -42,6 +44,85 @@
       </geometry>
     </collision>
   </link>
+
+  <!-- palm sensor 1 (top-right) -->
+  <link name="palm_sensor_1_link">
+    <visual>
+      <origin rpy="0 0 0 " xyz="0.0195 0.0228 -0.022"/>
+      <geometry>
+        <box size="0.001 0.0405 0.026"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0 " xyz="0.0195 0.0228 -0.022"/>
+      <geometry>
+        <box size="0.001 0.0405 0.026"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="palm_sensor_1_joint" type="fixed">
+    <parent link="allegro_base_link"/>
+    <child link="palm_sensor_1_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <!-- palm sensor 2 (top-left) -->
+  <link name="palm_sensor_2_link">
+    <visual>
+      <origin rpy="0 0 0 " xyz="0.0195 -0.0228 -0.022"/>
+      <geometry>
+        <box size="0.001 0.0405 0.026"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0 " xyz="0.0195 -0.0228 -0.022"/>
+      <geometry>
+        <box size="0.001 0.0405 0.026"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="palm_sensor_2_joint" type="fixed">
+    <parent link="allegro_base_link"/>
+    <child link="palm_sensor_2_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <!-- palm sensor 3 (bottom-left) -->
+  <link name="palm_sensor_3_link">
+    <visual>
+      <origin rpy="0 0 0 " xyz="0.0195 -0.0228 -0.053"/>
+      <geometry>
+        <box size="0.001 0.0405 0.026"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0 " xyz="0.0195 -0.0228 -0.022"/>
+      <geometry>
+        <box size="0.001 0.0405 0.026"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="palm_sensor_3_joint" type="fixed">
+    <parent link="allegro_base_link"/>
+    <child link="palm_sensor_3_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
 
   <!--FIRST FINGER-->
 
