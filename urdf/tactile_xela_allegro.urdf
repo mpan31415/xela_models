@@ -20,6 +20,7 @@
     <color rgba="0.8 0 0 1.0"/>
   </material>
 
+
   <!--PALM-->
 
   <link name="allegro_base_link" >
@@ -111,7 +112,7 @@
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
     <collision>
-      <origin rpy="0 0 0 " xyz="0.0195 -0.0228 -0.022"/>
+      <origin rpy="0 0 0 " xyz="0.0195 -0.0228 -0.053"/>
       <geometry>
         <box size="0.001 0.0405 0.026"/>
       </geometry>
@@ -124,7 +125,7 @@
   </joint>
 
 
-  <!--FIRST FINGER-->
+  <!--INDEX FINGER-->
 
   <link name="allegro_link_11">
     <visual>
@@ -191,6 +192,57 @@
     <dynamics damping="3" friction="5"/>
   </joint>
 
+  <!-- index finger sensor 4 -->
+  <link name="index_sensor_4_link">
+    <visual>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0082"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0082"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="index_sensor_4_joint" type="fixed">
+    <parent link="allegro_link_12"/>
+    <child link="index_sensor_4_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <!-- index finger sensor 3 -->
+  <link name="index_sensor_3_link">
+    <visual>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0458"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0458"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="index_sensor_3_joint" type="fixed">
+    <parent link="allegro_link_12"/>
+    <child link="index_sensor_3_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
 
   <link name="allegro_link_13">
     <visual>
@@ -214,7 +266,6 @@
         <mesh filename="package://xela_models/mesh_simplified/finger_link_3.obj" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-
   </link>
 
   <joint name="allegro_joint_13" type="revolute">
@@ -224,6 +275,32 @@
     <child link="allegro_link_13"/>
     <origin xyz="0 0 0.054" rpy="0 0 0" />
     <dynamics damping="8" friction="10"/>
+  </joint>
+
+  <!-- index finger sensor 2 -->
+  <link name="index_sensor_2_link">
+    <visual>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0344"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0344"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="index_sensor_2_joint" type="fixed">
+    <parent link="allegro_link_13"/>
+    <child link="index_sensor_2_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
 
   <link name="allegro_link_14">
@@ -268,6 +345,7 @@
     <origin xyz="-0.012601 0 0.020745" rpy="0 0 0" />
     <!--origin xyz="0.013341 0 0.043834" rpy="0 0 0" /-->
   </joint>
+
 
   <!--MIDDLE FINGER-->
 
@@ -327,7 +405,6 @@
         <mesh filename="package://xela_models/mesh_simplified/finger_link_2.obj" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-
   </link>
 
   <joint name="allegro_joint_22" type="revolute">
@@ -337,6 +414,58 @@
     <child link="allegro_link_22"/>
     <origin xyz="0 0 0.0192" rpy="0 0 0" />
     <dynamics damping="3" friction="5"/>
+  </joint>
+
+  <!-- middle finger sensor 4 -->
+  <link name="middle_sensor_4_link">
+    <visual>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0082"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0082"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="middle_sensor_4_joint" type="fixed">
+    <parent link="allegro_link_22"/>
+    <child link="middle_sensor_4_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <!-- middle finger sensor 3 -->
+  <link name="middle_sensor_3_link">
+    <visual>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0458"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0458"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="middle_sensor_3_joint" type="fixed">
+    <parent link="allegro_link_22"/>
+    <child link="middle_sensor_3_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
   
   <link name="allegro_link_23" >
@@ -370,6 +499,32 @@
     <child link="allegro_link_23"/>
     <origin xyz="0 0 0.054" rpy="0 0 0" />
     <dynamics damping="8" friction="10"/>
+  </joint>
+
+  <!-- middle finger sensor 2 -->
+  <link name="middle_sensor_2_link">
+    <visual>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0344"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0344"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="middle_sensor_2_joint" type="fixed">
+    <parent link="allegro_link_23"/>
+    <child link="middle_sensor_2_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
   
   <link name="allegro_link_24" >
@@ -417,7 +572,8 @@
     <!--origin xyz="0.013341 0 0.043834" rpy="0 0 0" /-->
   </joint>
 
-    <!--LITTLE FINGER-->
+
+    <!--RING FINGER-->
   <link name="allegro_link_31" >
 
     <visual>
@@ -486,6 +642,58 @@
     <origin xyz="0 0 0.0192" rpy="0 0 0" />
     <dynamics damping="3" friction="5"/>
   </joint>
+
+  <!-- ring finger sensor 4 -->
+  <link name="ring_sensor_4_link">
+    <visual>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0082"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0082"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="ring_sensor_4_joint" type="fixed">
+    <parent link="allegro_link_32"/>
+    <child link="ring_sensor_4_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <!-- ring finger sensor 3 -->
+  <link name="ring_sensor_3_link">
+    <visual>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0458"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0458"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="ring_sensor_3_joint" type="fixed">
+    <parent link="allegro_link_32"/>
+    <child link="ring_sensor_3_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
  
   <link name="allegro_link_33">
 
@@ -520,6 +728,32 @@
     <child link="allegro_link_33"/>
     <origin xyz="0 0 0.054" rpy="0 0 0" />
     <dynamics damping="8" friction="10"/>
+  </joint>
+
+  <!-- ring finger sensor 2 -->
+  <link name="ring_sensor_2_link">
+    <visual>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0344"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0344"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="ring_sensor_2_joint" type="fixed">
+    <parent link="allegro_link_33"/>
+    <child link="ring_sensor_2_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
   
   <link name="allegro_link_34" >
@@ -566,6 +800,7 @@
     <origin xyz="-0.012601 0 0.020745" rpy="0 0 0" />
     <!--origin xyz="0.013341 0 0.043834" rpy="0 0 0" /-->
   </joint>
+
 
    <!--THUMB-->
   <link name="allegro_link_41" >
@@ -659,7 +894,6 @@
         <mesh filename="package://xela_models/mesh_simplified/thumb_link_3.obj" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-
   </link> 
 
   <joint name="allegro_joint_43" type="revolute">
@@ -669,6 +903,32 @@
     <child link="allegro_link_43"/>
     <origin xyz="0 0 0.0192" rpy="0 0 0" />
     <dynamics damping="3" friction="10"/>
+  </joint>
+
+  <!-- thumb finger sensor 3 -->
+  <link name="thumb_sensor_3_link">
+    <visual>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.01"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.01"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="thumb_sensor_3_joint" type="fixed">
+    <parent link="allegro_link_43"/>
+    <child link="thumb_sensor_3_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
   
   <link name="allegro_link_44" >
@@ -703,6 +963,32 @@
     <child link="allegro_link_44"/>
     <origin xyz="0 0 0.0514" rpy="0 0 0" />
     <dynamics damping="3" friction="12"/>
+  </joint>
+
+  <!-- thumb finger sensor 2 -->
+  <link name="thumb_sensor_2_link">
+    <visual>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0082"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0 " xyz="0.015 0.0 0.0082"/>
+      <geometry>
+        <box size="0.001 0.018 0.0205"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="thumb_sensor_2_joint" type="fixed">
+    <parent link="allegro_link_44"/>
+    <child link="thumb_sensor_2_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
   
   <link name="allegro_link_44_tip">
