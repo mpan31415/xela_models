@@ -12,7 +12,8 @@ def generate_launch_description():
         # 'model', default_value='4x4', description='Xela model type (e.g. 4x4)'
         # 'model', default_value='ahrcpcpn', description='Xela model type (e.g. 4x4)'
         # 'model', default_value='my_xela_allegro', description='Xela model type (e.g. 4x4)'
-        'model', default_value='xela_allegro', description='Xela model type (e.g. 4x4)'
+        # 'model', default_value='xela_allegro', description='Xela model type (e.g. 4x4)'
+        'model', default_value='tactile_xela_allegro', description='Xela model type (e.g. 4x4)'
     )
     gui_arg = DeclareLaunchArgument(
         'gui', default_value='true', description='Use joint_state_publisher_gui if true'
